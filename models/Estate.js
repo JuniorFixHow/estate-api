@@ -45,6 +45,6 @@ const EstateSchema = new mongoose.Schema({
         type:Boolean,
         default:false
     },
-});
+}, {timestamps:true});
 
 export default mongoose.model("Estate", EstateSchema);
