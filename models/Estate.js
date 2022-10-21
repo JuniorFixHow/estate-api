@@ -26,25 +26,25 @@ const EstateSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    rating:{
-        type:Number,
-        min:0,
-        max:5
-    },
+    // rating:{
+    //     type:Number,
+    //     min:0,
+    //     max:5
+    // },
     photos:{
         type:[String],   
     },
-    buildings:{
-        type:[String]
-    },
+    // buildings:{
+    //     type:[String]
+    // },
     // cheapestPrice:{
     //     type:Number,
     //     required:true
     // },
-    featured:{
-        type:Boolean,
-        default:false
-    },
+    // featured:{
+    //     type:Boolean,
+    //     default:false
+    // },
 }, {timestamps:true});
 
 export default mongoose.model("Estate", EstateSchema);
