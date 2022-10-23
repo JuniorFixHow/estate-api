@@ -22,7 +22,7 @@ export const getUser = async(req, res, next)=>{
         const user = await User.findById(req.params.id);
         const { password, isAdmin, ...otherDetails} = user._doc;
         res.status(200).json({details:{...otherDetails}, isAdmin});
-    } catch (error) {
+    } catch (err) {
         next(err);
     }
 }

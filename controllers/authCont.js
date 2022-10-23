@@ -38,3 +38,12 @@ export const login = async(req, res, next)=>{
         next(err);
     }
 }
+
+export const logout = (req, res, next)=>{
+    try {
+        res.cookie('access_token', '', {maxAge:1});
+        res.redirect('/');
+    } catch (err) {
+        next(err);
+    }
+}
