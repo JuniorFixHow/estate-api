@@ -43,6 +43,7 @@ export const logout = (req, res, next)=>{
     try {
         res.cookie('access_token', '', {maxAge:1});
         // res.redirect('/login');
+        res.send('');
     } catch (err) {
         next(err);
     }
