@@ -42,7 +42,7 @@ export const login = async(req, res, next)=>{
 export const logout = (req, res, next)=>{
     try {
         res.cookie('access_token', '', {maxAge:1});
-        res.redirect('/');
+        res.redirect('/login');
     } catch (err) {
         next(err);
     }
